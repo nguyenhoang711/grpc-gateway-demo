@@ -1,0 +1,5 @@
+version: v1
+name: buf.build/nguyenhoang711/grpc-gateway-demo
+
+deps:
+  - buf.build/googleapis/googleapis
