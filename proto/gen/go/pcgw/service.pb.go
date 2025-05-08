@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        (unknown)
-// source: gateway/service.proto
+// source: pcgw/service.proto
 
-package gateway
+package pcgw
 
 import (
 	_ "google.golang.org/genproto/googleapis/api/annotations"
@@ -31,7 +31,7 @@ type AddUserRequest struct {
 
 func (x *AddUserRequest) Reset() {
 	*x = AddUserRequest{}
-	mi := &file_gateway_service_proto_msgTypes[0]
+	mi := &file_pcgw_service_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -43,7 +43,7 @@ func (x *AddUserRequest) String() string {
 func (*AddUserRequest) ProtoMessage() {}
 
 func (x *AddUserRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_gateway_service_proto_msgTypes[0]
+	mi := &file_pcgw_service_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -56,7 +56,7 @@ func (x *AddUserRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddUserRequest.ProtoReflect.Descriptor instead.
 func (*AddUserRequest) Descriptor() ([]byte, []int) {
-	return file_gateway_service_proto_rawDescGZIP(), []int{0}
+	return file_pcgw_service_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *AddUserRequest) GetName() string {
@@ -75,7 +75,7 @@ type AddUserResponse struct {
 
 func (x *AddUserResponse) Reset() {
 	*x = AddUserResponse{}
-	mi := &file_gateway_service_proto_msgTypes[1]
+	mi := &file_pcgw_service_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -87,7 +87,7 @@ func (x *AddUserResponse) String() string {
 func (*AddUserResponse) ProtoMessage() {}
 
 func (x *AddUserResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_gateway_service_proto_msgTypes[1]
+	mi := &file_pcgw_service_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -100,7 +100,7 @@ func (x *AddUserResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddUserResponse.ProtoReflect.Descriptor instead.
 func (*AddUserResponse) Descriptor() ([]byte, []int) {
-	return file_gateway_service_proto_rawDescGZIP(), []int{1}
+	return file_pcgw_service_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *AddUserResponse) GetId() string {
@@ -110,38 +110,38 @@ func (x *AddUserResponse) GetId() string {
 	return ""
 }
 
-var File_gateway_service_proto protoreflect.FileDescriptor
+var File_pcgw_service_proto protoreflect.FileDescriptor
 
-const file_gateway_service_proto_rawDesc = "" +
+const file_pcgw_service_proto_rawDesc = "" +
 	"\n" +
-	"\x15gateway/service.proto\x12\agateway\x1a\x1cgoogle/api/annotations.proto\"$\n" +
+	"\x12pcgw/service.proto\x12\x04pcgw\x1a\x1cgoogle/api/annotations.proto\"$\n" +
 	"\x0eAddUserRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\"!\n" +
 	"\x0fAddUserResponse\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02id2^\n" +
-	"\vUserService\x12O\n" +
-	"\aAddUser\x12\x17.gateway.AddUserRequest\x1a\x18.gateway.AddUserResponse\"\x11\x82\xd3\xe4\x93\x02\v:\x01*\"\x06/usersBBZ@github.com/nguyenhoang711/grpc-gatewat-demo/proto/gen/go/gatewayb\x06proto3"
+	"\x02id\x18\x01 \x01(\tR\x02id2X\n" +
+	"\vUserService\x12I\n" +
+	"\aAddUser\x12\x14.pcgw.AddUserRequest\x1a\x15.pcgw.AddUserResponse\"\x11\x82\xd3\xe4\x93\x02\v:\x01*\"\x06/usersB?Z=github.com/nguyenhoang711/grpc-gatewat-demo/proto/gen/go/pcgwb\x06proto3"
 
 var (
-	file_gateway_service_proto_rawDescOnce sync.Once
-	file_gateway_service_proto_rawDescData []byte
+	file_pcgw_service_proto_rawDescOnce sync.Once
+	file_pcgw_service_proto_rawDescData []byte
 )
 
-func file_gateway_service_proto_rawDescGZIP() []byte {
-	file_gateway_service_proto_rawDescOnce.Do(func() {
-		file_gateway_service_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_gateway_service_proto_rawDesc), len(file_gateway_service_proto_rawDesc)))
+func file_pcgw_service_proto_rawDescGZIP() []byte {
+	file_pcgw_service_proto_rawDescOnce.Do(func() {
+		file_pcgw_service_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_pcgw_service_proto_rawDesc), len(file_pcgw_service_proto_rawDesc)))
 	})
-	return file_gateway_service_proto_rawDescData
+	return file_pcgw_service_proto_rawDescData
 }
 
-var file_gateway_service_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_gateway_service_proto_goTypes = []any{
-	(*AddUserRequest)(nil),  // 0: gateway.AddUserRequest
-	(*AddUserResponse)(nil), // 1: gateway.AddUserResponse
+var file_pcgw_service_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_pcgw_service_proto_goTypes = []any{
+	(*AddUserRequest)(nil),  // 0: pcgw.AddUserRequest
+	(*AddUserResponse)(nil), // 1: pcgw.AddUserResponse
 }
-var file_gateway_service_proto_depIdxs = []int32{
-	0, // 0: gateway.UserService.AddUser:input_type -> gateway.AddUserRequest
-	1, // 1: gateway.UserService.AddUser:output_type -> gateway.AddUserResponse
+var file_pcgw_service_proto_depIdxs = []int32{
+	0, // 0: pcgw.UserService.AddUser:input_type -> pcgw.AddUserRequest
+	1, // 1: pcgw.UserService.AddUser:output_type -> pcgw.AddUserResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -149,26 +149,26 @@ var file_gateway_service_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_gateway_service_proto_init() }
-func file_gateway_service_proto_init() {
-	if File_gateway_service_proto != nil {
+func init() { file_pcgw_service_proto_init() }
+func file_pcgw_service_proto_init() {
+	if File_pcgw_service_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_gateway_service_proto_rawDesc), len(file_gateway_service_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_pcgw_service_proto_rawDesc), len(file_pcgw_service_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_gateway_service_proto_goTypes,
-		DependencyIndexes: file_gateway_service_proto_depIdxs,
-		MessageInfos:      file_gateway_service_proto_msgTypes,
+		GoTypes:           file_pcgw_service_proto_goTypes,
+		DependencyIndexes: file_pcgw_service_proto_depIdxs,
+		MessageInfos:      file_pcgw_service_proto_msgTypes,
 	}.Build()
-	File_gateway_service_proto = out.File
-	file_gateway_service_proto_goTypes = nil
-	file_gateway_service_proto_depIdxs = nil
+	File_pcgw_service_proto = out.File
+	file_pcgw_service_proto_goTypes = nil
+	file_pcgw_service_proto_depIdxs = nil
 }

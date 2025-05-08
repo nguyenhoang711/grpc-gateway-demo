@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package gateway;
+package pcgw;
 
-option go_package = "github.com/nguyenhoang711/grpc-gateway-demo/proto/gen/go/gateway";
+option go_package = "github.com/nguyenhoang711/grpc-gateway-demo/proto/gen/go/pcgw";
 
 service ChatService {
   rpc Chat(stream ChatRequest) returns (stream ChatResponse);

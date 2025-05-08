@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             (unknown)
-// source: gateway/chat_service.proto
+// source: pcgw/chat_service.proto
 
-package gateway
+package pcgw
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	ChatService_Chat_FullMethodName = "/gateway.ChatService/Chat"
+	ChatService_Chat_FullMethodName = "/pcgw.ChatService/Chat"
 )
 
 // ChatServiceClient is the client API for ChatService service.
@@ -100,7 +100,7 @@ type ChatService_ChatServer = grpc.BidiStreamingServer[ChatRequest, ChatResponse
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ChatService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "gateway.ChatService",
+	ServiceName: "pcgw.ChatService",
 	HandlerType: (*ChatServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
@@ -111,5 +111,5 @@ var ChatService_ServiceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "gateway/chat_service.proto",
+	Metadata: "pcgw/chat_service.proto",
 }

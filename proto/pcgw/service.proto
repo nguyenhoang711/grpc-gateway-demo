@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package gateway;
+package pcgw;
 
 import "google/api/annotations.proto";
 
-option go_package = "github.com/nguyenhoang711/grpc-gatewat-demo/proto/gen/go/gateway";
+option go_package = "github.com/nguyenhoang711/grpc-gatewat-demo/proto/gen/go/pcgw";
 
 service UserService {
   rpc AddUser(AddUserRequest) returns (AddUserResponse) {
